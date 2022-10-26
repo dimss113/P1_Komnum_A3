@@ -14,7 +14,7 @@
 - numpy
 - math
 - matplotlib
-> Pada praktikum komputasi numerik modul 1 membutuhkan 2 instalasi library yaitu numpy dan matplotlib. Kita bisa lakukan instalasi dengan menggunaka pip.
+> Pada praktikum komputasi numerik modul 1 membutuhkan 2 instalasi library yaitu numpy dan matplotlib. Kita bisa lakukan instalasi dengan menggunakan pip.
 ``` 
 pip install numpy
 pip install matplotlib
