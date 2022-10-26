@@ -83,6 +83,94 @@ def bisection():
         elif mul > 0:
             xl = xr
 ```
+Kode diatas merupakan implementasi dari metode bolzano untuk mencari faktor dari sebuah fungsi yang telah ditentukan.
+
+### Menampilkan Grafik
+```py
+plt.title("result")
+plt.xlabel("iteration")
+plt.ylabel("Result of xr")
+plt.plot(list_iterate, list_xr)
+plt.show()
+```
+Dari x lower, x upper, dan iterasi yang diinputkan kita bisa lakukan plotting menggunakan library matplotlib dengan parameter list_iterate sebagai absis dan list_xr sebagai oordinatnya.
+
+### Contoh Inputan
+```
+xl = -1
+xr = 2
+iterate = 13
+```
+dari contoh inputan diatas, degnan mengimplementasikan pada program yang telah dibuat maka didapatkan hasil:
+```
+masukkan x lower: -1
+masukkan x upper: 2
+masukkan jumlah interasi: 13
+iterasi ke - 1
+xu dan xl: 2.0 || -1.0
+xr dan xt: 0.5 || 1.26611328125
+et: 0.60509
+
+iterasi ke - 2
+xu dan xl: 2.0 || 0.5
+xr dan xt: 1.25 || 1.26611328125
+et: 0.01273
+
+iterasi ke - 3
+xu dan xl: 2.0 || 1.25
+xr dan xt: 1.625 || 1.26611328125
+et: 0.28346
+
+iterasi ke - 4
+xu dan xl: 1.625 || 1.25
+xr dan xt: 1.4375 || 1.26611328125
+et: 0.13536
+
+iterasi ke - 5
+xu dan xl: 1.4375 || 1.25
+xr dan xt: 1.34375 || 1.26611328125
+et: 0.06132
+
+iterasi ke - 6
+xu dan xl: 1.34375 || 1.25
+xr dan xt: 1.296875 || 1.26611328125
+et: 0.0243
+
+iterasi ke - 7
+xu dan xl: 1.296875 || 1.25
+xr dan xt: 1.2734375 || 1.26611328125
+et: 0.00578
+
+iterasi ke - 8
+xu dan xl: 1.2734375 || 1.25
+xr dan xt: 1.26171875 || 1.26611328125
+et: 0.00347
+
+iterasi ke - 9
+xu dan xl: 1.2734375 || 1.26171875
+xr dan xt: 1.267578125 || 1.26611328125
+et: 0.00116
+
+iterasi ke - 10
+xu dan xl: 1.267578125 || 1.26171875
+xr dan xt: 1.2646484375 || 1.26611328125
+et: 0.00116
+
+iterasi ke - 11
+xu dan xl: 1.267578125 || 1.2646484375
+et: 0.0
+
+hasil faktor: 1.26611328125
+```
+**maka didapatkan hasil akhir faktornya adalah 1.26611328125.**
+
+## Grafik 
+berikut merupakan grafik yang memplot hasil xr pada tiap iterasi yang dilakukan.
+
+![grafik](Documentation/graph.png)
+
+
+
 
 
 
