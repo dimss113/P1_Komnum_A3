@@ -1,55 +1,51 @@
-import matplotlib.pyplot as plt
 import numpy as np
-import math 
+import matplotlib.pyplot as plt
+import math
 
-xl = float(input('lower x: '))
-xu = float(input("upper x: "))
-iterate = int(input("iteration: "))
-x = 1.269
-error_tolerate = 0.05;
+xl = float(input("masukkan x lower: "))
+xu = float(input("masukkan x upper: "))
+iterate = int(input("masukkan jumlah interasi: "))
+xt = 1.26611328125
 
-list_of_xr = np.zeros(iterate)
-list_iterate = np.arange(1, iterate+1, 1)
+
+list_xr = list()
+list_iterate = list()
 
 def function(x):
-    return math.pow(x, 2) * 9*x - 13
+    return x*x + 9*x - 13
 
 def bisection():
     global xl, xu
-    Fupper = function(xu)
-    Flower = function(xl)
-    xr = (xl + xu)/2
-    xl, xu = interval_check(Fupper, Flower, xr)
-    return xr;
-
-def bisection_method():
-    global xl, xu
     for i in range(iterate):
-        xr = bisection()
-        list_of_xr[i] = xr
-        et = (x-xr)/x
-        if((et <= error_tolerate) or round(xr, 3) == x):
-            print(f"factor: {xr}")
-        print(f"{xr} and {x}")
-        print(f"et: {et}")
-    
-def interval_check(Fupper, Flower, xr):
-    global xl, xu
-    if(Fupper * Flower) < 0:
-        xu = xr
-        return xl, xu
-    elif(Fupper * Flower) > 0:
-        xl = xr
-        return xl, xu
-    else:
-        return xr, xr
+        xr = (xl+xu)/2
+        list_xr.append(xr)
+        list_iterate.append(i+1)
+        
+        print(f"iterasi ke - {i+1}")
+        print(f"xu dan xl: {xu} || {xl}")
+        print(f"xr dan xt: {xr} || {xt}")
 
+        et = round(math.fabs((xt-xr)/xt), 5)
+        print(f"et: {et}\n")
 
-bisection_method()
+        fxl = function(xl)
+        fxr = function(xr)
 
+        mul = round(fxl * fxr, 3)
+        if(mul == 0):
+            print(f"hasil faktor: {xr} ")
+            return
+        elif (mul) < 0:
+            xu = xr
+        elif mul > 0:
+            xl = xr
 
-plt.title("xr result")
+bisection()
+
+print(list_xr)
+
+plt.title("result")
 plt.xlabel("iteration")
 plt.ylabel("Result of xr")
-plt.plot(list_iterate, list_of_xr)
+plt.plot(list_iterate, list_xr)
 plt.show()
