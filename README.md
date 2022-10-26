@@ -2,7 +2,7 @@
 **<br>Dimas Fadilah Akbar_5025211010**
 **<br>Abdullah Yaskyur Bifadhlil Midror_5025211035**
 **<br>Achmad Khosyi' Assajjad Ramandanta_5025211007**
-**<br>Arkana Bilal Imani_5025211010**
+**<br>Arkana Bilal Imani_5025211034**
 **<br>Duevano Fairuz Pandya_5025211052**
 
 
