@@ -54,6 +54,7 @@ list_xr merupakan array yang akan menyimpan value dari xr untuk tiap iterasi, se
 def function(x):
     return x*x + 9*x - 13
 ```
+fungsi dapat diubah sesuai dengan persoalan bolzano yang ingin diselesaikan, disini kami menggunakan persoalan fungsi x^2 + 9x -13 
 
 ### Program Bolzano atau Biseksi  
 ```py
