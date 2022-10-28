@@ -222,5 +222,6 @@ plt.show()
 
 Menggabungkan kedua grafik diatas dapat kita gunakan fungsi add_subplot dengan parameter (row, column, position), dengan letak grafik fungsi pada baris pertama, dan grafik xr terdapat pada baris kedua. 
 
+![grafik2](Documentation/graph2.png)
 
 
