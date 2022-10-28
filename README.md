@@ -165,15 +165,62 @@ hasil faktor: 1.26611328125
 ```
 **maka didapatkan hasil akhir faktornya adalah 1.26611328125.**
 
-## Grafik 
+## Grafik Iterasi dan Xr
 berikut merupakan grafik yang memplot hasil xr pada tiap iterasi yang dilakukan.
 
 ![grafik](Documentation/graph.png)
 
 
 
+## Menampilkan Grafik Fungsi
+```py
+x_point = np.linspace(-50, 40, 100);
+y_point = function(x_point)
+```
+
+kode diatas akan melakukann plotting dari x=-50 hingga x=40 dengan y merupakan nilai dari f(x)-nya. 
+
+```py
+fig = plt.figure()
+ax1 = fig.add_subplot(1, 1, 1)
+ax1.spines['left'].set_position('zero')
+ax1.spines['bottom'].set_position('zero')
+ax1.spines['right'].set_color('none')
+ax1.spines['top'].set_color('none')
+ax1.xaxis.set_ticks_position('bottom')
+ax1.yaxis.set_ticks_position('left')
+plt.plot(x_point, y_point, 'g')
+```
+kode diatas akan menampilkan fungsi dari persamaan yang sebelumnya telah ditentukan. set_position digunakan untuk menentukan titik tengah dari posisinya yang mana kami set menjadi (0, 0). Grafiknya adalah sebagai berikut:
+
+![grafik3](Documentation/graph3.png)
 
 
+## Menampilkan kedua grafik
+```py
+fig = plt.figure()
+ax1 = fig.add_subplot(2, 1, 1)
+ax1.spines['left'].set_position('zero')
+ax1.spines['bottom'].set_position('zero')
+ax1.spines['right'].set_color('none')
+ax1.spines['top'].set_color('none')
+ax1.xaxis.set_ticks_position('bottom')
+ax1.yaxis.set_ticks_position('left')
+plt.plot(x_point, y_point, 'g')
+
+ax2 = fig.add_subplot(2, 1, 2)
+ax2.spines['left'].set_position('center')
+ax2.spines['bottom'].set_position('center')
+ax2.spines['right'].set_color('none')
+ax2.spines['top'].set_color('none')
+ax2.xaxis.set_ticks_position('bottom')
+ax2.yaxis.set_ticks_position('left')
+plt.plot(list_iterate, list_xr)
+
+plt.show()
+```
+
+Menggabungkan kedua grafik diatas dapat kita gunakan fungsi add_subplot dengan parameter (row, column, position), dengan letak grafik fungsi pada baris pertama, dan grafik xr terdapat pada baris kedua. 
 
 
 
